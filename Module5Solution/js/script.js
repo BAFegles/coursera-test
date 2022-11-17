@@ -119,12 +119,11 @@ function buildAndShowHomeHTML (categories) {
       //
       // var homeHtmlToInsertIntoMainPage = ....
 
-      var propValue = chosenCategoryShortName;
-      var propToReplace = "{{" + "randomCategoryShortName" + "}}";
+      chosenCategoryShortName = "'" + chosenCategoryShortName + "'";
       var homeHtmlToInsertIntoMainPage = insertProperty(
-        $dc.loadMenuItems(propValue), 
-        propToReplace,
-        propValue
+        homeHtml, 
+        "randomCategoryShortName",
+        chosenCategoryShortName
         );
       
       // TODO: STEP 4: Insert the produced HTML in STEP 3 into the main page
